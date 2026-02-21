@@ -15,8 +15,8 @@
 
 ### Діаграма прецедентів (Use-Case)
 
-![Use-Case Diagram](img/use-case-diagram.png)
+![Use-Case Diagram](img/use-case.png)
 
 ### Схема бази даних (ERD)
 
-![Database Schema](img/db-schema.png)
+![Database Schema](img/er-diagram.png)
