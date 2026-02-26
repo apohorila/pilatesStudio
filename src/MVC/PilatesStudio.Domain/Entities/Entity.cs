@@ -1,6 +1,7 @@
-namespace PilatesStudio.Domain.Entities;
-
-public abstract class Entity
+namespace PilatesStudio.Domain.Entities
 {
-    public long Id { get; set; }
+    public abstract class Entity
+    {
+        public long Id {get;set;}
+    }
 }

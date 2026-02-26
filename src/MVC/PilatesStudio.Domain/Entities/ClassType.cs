@@ -1,7 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+
 namespace PilatesStudio.Domain.Entities;
 
-public class ClassType : Entity, IAggregateRoot
+public partial class ClassType : Entity
 {
-    public string TypeName { get; set; }
-    public string Description { get; set; }
+
+    public string? TypeName { get; set; }
+
+    public virtual ICollection<Class> Classes { get; set; } = new List<Class>();
 }
