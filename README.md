@@ -19,4 +19,4 @@
 
 ### Схема бази даних (ERD)
 
-![Database Schema](img/er-diagram.png)
+![Database Schema](img/er1.0.png)
