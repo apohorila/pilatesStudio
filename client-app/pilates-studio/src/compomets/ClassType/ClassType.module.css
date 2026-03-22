@@ -1,0 +1,17 @@
+.typeContainer{
+    background-color: #462521;
+    padding: 20px;
+    border-radius: 30px;
+    /* width: fit-content; */
+    color: #F9DEC9;
+}
+.typeContainer h3{
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.typeContainer p{
+    margin-bottom: 0;
+    margin-left: 10px;
+}

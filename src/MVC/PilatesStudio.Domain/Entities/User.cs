@@ -15,6 +15,7 @@ public partial class User : Entity
     public string? PasswordHash { get; set; }
 
     public DateOnly? BirthDate { get; set; }
+    public UserRole Role { get; set; } = UserRole.User;
 
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 

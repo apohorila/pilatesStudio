@@ -7,6 +7,7 @@ public partial class ClassType : Entity
 {
 
     public string? TypeName { get; set; }
+    public string? Description { get; set; }
 
     public virtual ICollection<Class> Classes { get; set; } = new List<Class>();
 }

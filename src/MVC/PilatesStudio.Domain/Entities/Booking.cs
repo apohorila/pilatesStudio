@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace PilatesStudio.Domain.Entities;
 
-public partial class Booking: Entity
+public partial class Booking : Entity
 {
-  
     public long UserId { get; set; }
 
     public long ClassId { get; set; }

@@ -1,0 +1,219 @@
+/* Admin.module.css */
+
+.page {
+  min-height: 100vh;
+  background: #FBD1A2;
+  font-family: inherit;
+  padding: 48px 24px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a0856c;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #777;
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.addBtn {
+  padding: 12px 24px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: inherit;
+  border-radius: 60px;
+  background-color: #593837;
+}
+
+.addBtn:hover {
+  background: #333;
+}
+
+.divider {
+  border-top: 1px solid #e8e0d8;
+  margin: 56px 0;
+}
+
+.form {
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.formTitle {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  background: #faf9f7;
+}
+
+.input:focus {
+  border-color: #a0856c;
+}
+
+.saveBtn {
+  padding: 10px 20px;
+  background: #a0856c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.saveBtn:hover {
+  background: #8a7060;
+}
+
+.cancelBtn {
+  padding: 10px 20px;
+  background: transparent;
+  color: #777;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.cancelBtn:hover {
+  border-color: #aaa;
+  color: #444;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.cardContent {
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.cardMeta {
+  font-size: 13px;
+  color: #a0856c;
+  margin: 0 0 8px 0;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn {
+  padding: 7px 16px;
+  background: transparent;
+  color: #a0856c;
+  border: 1px solid #a0856c;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.editBtn:hover {
+  background: #a0856c;
+  color: #fff;
+}
+
+.deleteBtn {
+  padding: 7px 16px;
+  background: transparent;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.deleteBtn:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

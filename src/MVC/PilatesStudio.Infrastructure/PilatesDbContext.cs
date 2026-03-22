@@ -30,10 +30,6 @@ public partial class PilatesDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=studiodb;Username=apohorila;Password=postgres");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Booking>(entity =>
@@ -43,7 +39,7 @@ public partial class PilatesDbContext : DbContext
             entity.ToTable("bookings");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("booking_id");
             entity.Property(e => e.ClassId).HasColumnName("class_id");
             entity.Property(e => e.CreatedAt)
@@ -77,7 +73,7 @@ public partial class PilatesDbContext : DbContext
             entity.HasIndex(e => e.StatusName, "booking_statuses_status_name_key").IsUnique();
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("status_id");
             entity.Property(e => e.StatusName)
                 .HasMaxLength(50)
@@ -93,7 +89,7 @@ public partial class PilatesDbContext : DbContext
             entity.HasIndex(e => e.BookingId, "uq_booking_id").IsUnique();
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("booking_status_history_id");
             entity.Property(e => e.BookingId).HasColumnName("booking_id");
             entity.Property(e => e.ChangedAt)
@@ -119,7 +115,7 @@ public partial class PilatesDbContext : DbContext
             entity.ToTable("classes");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("class_id");
             entity.Property(e => e.ClassName)
                 .HasMaxLength(200)
@@ -154,11 +150,14 @@ public partial class PilatesDbContext : DbContext
             entity.ToTable("class_types");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("type_id");
             entity.Property(e => e.TypeName)
                 .HasMaxLength(50)
                 .HasColumnName("type_name");
+            entity.Property(e => e.Description)
+                .HasMaxLength(500)
+                .HasColumnName("description");
         });
 
         modelBuilder.Entity<Instructor>(entity =>
@@ -170,7 +169,7 @@ public partial class PilatesDbContext : DbContext
             entity.HasIndex(e => e.UserId, "uq_instructor_user").IsUnique();
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("instructor_id");
             entity.Property(e => e.Bio)
                 .HasMaxLength(500)
@@ -191,7 +190,7 @@ public partial class PilatesDbContext : DbContext
             entity.ToTable("users");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("user_id");
             entity.Property(e => e.BirthDate).HasColumnName("birth_date");
             entity.Property(e => e.Email)
@@ -206,6 +205,10 @@ public partial class PilatesDbContext : DbContext
             entity.Property(e => e.Surname)
                 .HasMaxLength(255)
                 .HasColumnName("surname");
+            entity.Property(e => e.Role)
+                .HasColumnName("role")
+                .HasDefaultValue(UserRole.User)
+                .HasConversion<string>();
         });
 
         OnModelCreatingPartial(modelBuilder);

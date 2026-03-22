@@ -1,0 +1,248 @@
+.page {
+  min-height: 100vh;
+  background: #faf9f7;
+  font-family: inherit;
+  padding: 48px 24px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a0856c;
+  font-size: 14px;
+  padding: 0;
+  margin-bottom: 32px;
+  font-family: inherit;
+  font-weight: 400;
+}
+.backBtn:hover {
+  color: #1a1a1a;
+}
+.classInfo {
+  margin-bottom: 40px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a0856c;
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+.meta {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: #a0856c;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.desc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+.bookingsTitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+.empty {
+  color: #aaa;
+  font-style: italic;
+  font-size: 14px;
+}
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.bookingRow {
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.bookingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bookingName {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.bookingEmail {
+  font-size: 13px;
+  color: #aaa;
+}
+.bookingActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.confirmBtn {
+  padding: 7px 16px;
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.confirmBtn:hover {
+  background: #27ae60;
+}
+.cancelBtn {
+  padding: 7px 16px;
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.cancelBtn:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+.attendedBtn {
+  padding: 7px 16px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.attendedBtn:hover {
+  background: #2980b9;
+}
+.bookingSection {
+  margin-top: 24px;
+}
+.bookedNote {
+  color: #2ecc71;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.spotsNote {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+.pastNote {
+  color: #aaa;
+  font-style: italic;
+  font-size: 15px;
+}
+.fullNote {
+  color: #e74c3c;
+  font-size: 15px;
+}
+.bookBtn {
+  padding: 12px 32px;
+  background: #593837;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+}
+.bookBtn:hover {
+  background: #7a4e4d;
+}
+.cancelMyBtn {
+  padding: 10px 24px;
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+.cancelMyBtn:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+.bookedInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.instructorCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f5f0eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.instructorAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #593837;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: Georgia, serif;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.instructorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instructorName {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.instructorMeta {
+  font-size: 13px;
+  color: #a0856c;
+  margin: 0;
+}
+
+.instructorBio {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
