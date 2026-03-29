@@ -25,15 +25,6 @@ export default function SideBar({ isOpen, onClose }) {
               Мої записи
             </NavLink>
           </nav>
-
-          
-          <div className={styles.excelSection}>
-            <p className={styles.excelLabel}>Експорт даних</p>
-            <button className={styles.excelBtn}>
-              <span>📥</span>
-              Завантажити Excel
-            </button>
-          </div>
         </div>
       </div>
     </>

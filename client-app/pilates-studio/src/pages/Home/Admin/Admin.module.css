@@ -46,6 +46,7 @@
 }
 
 .addBtn {
+  margin-top: 20px;
   padding: 12px 24px;
   background: #1a1a1a;
   color: #fff;
@@ -217,3 +218,24 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.exportButtons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.exportBtn {
+  padding: 10px 20px;
+  background: #a0856c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.exportBtn:hover { background: #7a6050; }

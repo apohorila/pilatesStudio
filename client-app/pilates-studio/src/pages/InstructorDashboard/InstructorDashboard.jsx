@@ -139,9 +139,12 @@ export default function Instructor() {
               </select>
 
               <input
-                lassName={styles.input}
+                className={styles.input}
                 type="datetime-local"
-                min={new Date().toISOString().slice(0, 10)}
+                min={new Date().toISOString().slice(0, 16)}
+                max={new Date(Date.now() + 21 * 24 * 60 * 60 * 1000)
+                  .toISOString()
+                  .slice(0, 16)}
                 value={classForm.ScheduledAt}
                 onChange={(e) =>
                   setClassForm({ ...classForm, ScheduledAt: e.target.value })

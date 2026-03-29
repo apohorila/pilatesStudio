@@ -129,3 +129,22 @@
   background: #e74c3c;
   color: #fff;
 }
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.exportBtn {
+  padding: 10px 20px;
+  background: #a0856c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.exportBtn:hover { background: #7a6050; }

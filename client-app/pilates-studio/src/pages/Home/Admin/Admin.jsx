@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { fetchClassTypes } from "../../../api";
 import styles from "./Admin.module.css";
 import API_BASE_URL from "../../../config";
@@ -15,7 +15,7 @@ const fetchInstructors = async () => {
 };
 
 export default function Admin() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [classTypes, setClassTypes] = useState([]);
   const [instructors, setInstructors] = useState([]);
   const [showClassForm, setShowClassForm] = useState(false);
@@ -512,6 +512,46 @@ export default function Admin() {
       >
         📊 Статистика
       </button>
+      {/* Export buttons */}
+      <div className={styles.exportButtons}>
+        <button
+          className={styles.exportBtn}
+          onClick={() => {
+            window.location.href = `${API_BASE_URL}/api/classes/export`;
+          }}
+        >
+          📥 Експорт занять
+        </button>
+        <button
+          className={styles.exportBtn}
+          onClick={() => {
+            window.location.href = `${API_BASE_URL}/api/bookings/export`;
+          }}
+        >
+          📥 Експорт записів
+        </button>
+        <label className={styles.exportBtn} style={{ cursor: "pointer" }}>
+          📤 Імпорт занять
+          <input
+            type="file"
+            accept=".xlsx"
+            style={{ display: "none" }}
+            onChange={async (e) => {
+              const file = e.target.files[0];
+              if (!file) return;
+              const formData = new FormData();
+              formData.append("fileExcel", file);
+              const res = await fetch(`${API_BASE_URL}/api/classes/import`, {
+                method: "POST",
+                body: formData,
+              });
+              if (res.ok) alert("Імпорт успішний!");
+              else alert("Помилка імпорту");
+              e.target.value = "";
+            }}
+          />
+        </label>
+      </div>
     </div>
   );
 }
